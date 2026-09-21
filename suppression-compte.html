@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suppression de compte — Morphos</title>
+    <meta
+      name="description"
+      content="Comment supprimer ton compte Morphos et tes données, avec ou sans l'application."
+    />
+    <link rel="icon" href="assets/logo-morphos.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --purple-start: #411e7a;
+        --purple-end: #12012c;
+        --footer-bg: #1b1140;
+        --footer-border: rgba(255, 255, 255, 0.1);
+        --text-muted: rgba(255, 255, 255, 0.55);
+        --text-faint: rgba(255, 255, 255, 0.35);
+        --content-heading: #2c1259;
+        --content-text: #2b2b2e;
+        --content-muted: #5c5c63;
+        --content-link: #5b2ea6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        background: #ffffff;
+        color: var(--content-text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* --- BANDEAU (header + titre de page) --- */
+      .top-band {
+        background: linear-gradient(
+          160deg,
+          var(--purple-start) 0%,
+          var(--purple-end) 100%
+        );
+        color: #ffffff;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 48px;
+      }
+
+      .logo {
+        height: 28px;
+        width: auto;
+        display: block;
+      }
+
+      .follow-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 400;
+        cursor: default;
+      }
+
+      .follow-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .follow-icons img {
+        display: block;
+      }
+
+      .page-title {
+        text-align: center;
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 0;
+        padding: 48px 24px 64px;
+      }
+
+      /* --- CONTENU --- */
+      .content-wrap {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: 56px 24px 80px;
+      }
+
+      .content {
+        max-width: 720px;
+        width: 100%;
+      }
+
+      .content p.updated {
+        color: var(--content-muted);
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 40px;
+      }
+
+      .content h2 {
+        color: var(--content-heading);
+        font-size: 22px;
+        font-weight: 700;
+        margin: 40px 0 16px;
+      }
+
+      .content h2:first-of-type {
+        margin-top: 0;
+      }
+
+      .content h3 {
+        color: var(--content-heading);
+        font-size: 16px;
+        font-weight: 700;
+        margin: 24px 0 8px;
+      }
+
+      .content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0 0 16px;
+      }
+
+      .content ul {
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      .content li {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 6px;
+      }
+
+      .content strong {
+        font-weight: 600;
+      }
+
+      .content a {
+        color: var(--content-link);
+        text-decoration: underline;
+      }
+
+      /* --- FOOTER --- */
+      .site-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 24px 24px;
+        background: var(--footer-bg);
+        border-top: 1px solid var(--footer-border);
+      }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .footer-link {
+        font-size: 13px;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        background: none;
+        border: none;
+        cursor: default;
+        font-family: inherit;
+      }
+
+      a.footer-link {
+        cursor: pointer;
+      }
+
+      a.footer-link:hover {
+        color: #ffffff;
+      }
+
+      .footer-copyright {
+        font-size: 12px;
+        color: var(--text-faint);
+      }
+
+      /* --- TABLETTE --- */
+      @media (max-width: 900px) {
+        .site-header {
+          padding: 28px 36px;
+        }
+
+        .page-title {
+          font-size: 28px;
+          padding: 48px 24px 64px;
+        }
+      }
+
+      /* --- MOBILE --- */
+      @media (max-width: 560px) {
+        .site-header {
+          padding: 22px 20px;
+        }
+
+        .logo {
+          height: 22px;
+        }
+
+        .follow-btn {
+          gap: 8px;
+          font-size: 11px;
+        }
+
+        .follow-btn span:first-child {
+          display: none;
+        }
+
+        .follow-icons {
+          gap: 14px;
+        }
+
+        .follow-icons img {
+          width: 28px;
+          height: 28px;
+        }
+
+        .page-title {
+          font-size: 22px;
+          padding: 48px 20px 64px;
+        }
+
+        .content-wrap {
+          padding: 40px 20px 56px;
+        }
+
+        .site-footer {
+          gap: 16px 24px;
+          padding: 20px 20px;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .footer-link {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-band">
+      <header class="site-header">
+        <a href="index.html" style="display: block">
+          <img src="assets/logo-morphos.svg" alt="Morphos" class="logo" />
+        </a>
+
+        <div class="follow-btn" role="img" aria-label="Nous suivre sur Instagram et TikTok">
+          <span>Nous suivre</span>
+          <span class="follow-icons">
+            <img src="assets/icon-instagram.svg" alt="" width="22" height="22" />
+            <img src="assets/icon-tiktok.svg" alt="" width="22" height="22" />
+          </span>
+        </div>
+      </header>
+
+      <h1 class="page-title">Suppression de compte</h1>
+    </div>
+
+    <div class="content-wrap">
+      <article class="content">
+        <p class="updated"><strong>Dernière mise à jour : 21 septembre 2026</strong></p>
+
+        <h2>1. Supprimer ton compte depuis l'application</h2>
+        <p>
+          C'est la méthode la plus rapide : la suppression est immédiate et
+          automatique.
+        </p>
+        <ul>
+          <li>Ouvre Morphos et va dans <strong>Profil → Paramètres du compte</strong>.</li>
+          <li>Appuie sur <strong>Supprimer mon compte</strong>.</li>
+          <li>Confirme la suppression définitive.</li>
+        </ul>
+
+        <h2>2. Demander la suppression sans l'application</h2>
+        <p>
+          Si tu n'as plus accès à l'application, tu peux demander la
+          suppression de ton compte et de tes données en nous écrivant depuis
+          l'adresse email associée à ton compte Morphos, via notre
+          <a href="contact.html">formulaire de contact</a> ou directement à
+          <a href="mailto:guiral.lapouge64@gmail.com">guiral.lapouge64@gmail.com</a>.
+          Merci d'indiquer clairement qu'il s'agit d'une demande de
+          suppression de compte. Ta demande est traitée manuellement sous
+          quelques jours ouvrés.
+        </p>
+
+        <h2>3. Quelles données sont supprimées</h2>
+        <p>
+          La suppression de ton compte entraîne la suppression immédiate et
+          définitive de l'ensemble de tes données personnelles, notamment :
+        </p>
+        <ul>
+          <li>Ton profil (identité, poids, taille, objectifs, matériel, blessures/limitations signalées)</li>
+          <li>Tes séances d'entraînement et ton programme</li>
+          <li>Tes logs nutritionnels et ton historique de pas</li>
+          <li>Tes conversations avec le Coach IA</li>
+          <li>Tes posts, commentaires, likes et abonnements sur la Communauté</li>
+          <li>Tes tickets de support</li>
+        </ul>
+        <p>
+          Seules tes éventuelles contributions à la bibliothèque d'aliments
+          partagée par la communauté sont conservées, mais anonymisées
+          (dissociées de ton compte) : il s'agit de contenu partagé, pas de
+          données personnelles.
+        </p>
+        <p>
+          Pour plus de détails sur les données que nous collectons et leur
+          durée de conservation, consulte notre
+          <a href="politique-de-confidentialite.html">politique de confidentialité</a>.
+        </p>
+      </article>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a class="footer-link" href="cgu.html">Conditions Générales d'Utilisation</a>
+        <a class="footer-link" href="politique-de-confidentialite.html">Politique de confidentialité</a>
+        <a class="footer-link" href="suppression-compte.html">Suppression de compte</a>
+        <a class="footer-link" href="contact.html">Nous contacter</a>
+        <span class="footer-link">Instagram</span>
+        <span class="footer-link">TikTok</span>
+      </div>
+      <div class="footer-copyright">© 2026 - Morphos</div>
+    </footer>
+  </body>
+</html>
