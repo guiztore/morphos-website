@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Politique de confidentialité — Morphos</title>
+    <meta
+      name="description"
+      content="Politique de confidentialité de Morphos, ton coach IA personnel pour l'entraînement et la nutrition."
+    />
+    <link rel="icon" href="assets/logo-morphos.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --purple-start: #411e7a;
+        --purple-end: #12012c;
+        --footer-bg: #1b1140;
+        --footer-border: rgba(255, 255, 255, 0.1);
+        --text-muted: rgba(255, 255, 255, 0.55);
+        --text-faint: rgba(255, 255, 255, 0.35);
+        --content-heading: #2c1259;
+        --content-text: #2b2b2e;
+        --content-muted: #5c5c63;
+        --content-link: #5b2ea6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        background: #ffffff;
+        color: var(--content-text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* --- BANDEAU (header + titre de page) --- */
+      .top-band {
+        background: linear-gradient(
+          160deg,
+          var(--purple-start) 0%,
+          var(--purple-end) 100%
+        );
+        color: #ffffff;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 48px;
+      }
+
+      .logo {
+        height: 28px;
+        width: auto;
+        display: block;
+      }
+
+      .follow-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 400;
+        cursor: default;
+      }
+
+      .follow-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .follow-icons img {
+        display: block;
+      }
+
+      .page-title {
+        text-align: center;
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 0;
+        padding: 48px 24px 64px;
+      }
+
+      /* --- CONTENU --- */
+      .content-wrap {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: 56px 24px 80px;
+      }
+
+      .content {
+        max-width: 720px;
+        width: 100%;
+      }
+
+      .content p.updated {
+        color: var(--content-muted);
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 40px;
+      }
+
+      .content h2 {
+        color: var(--content-heading);
+        font-size: 22px;
+        font-weight: 700;
+        margin: 40px 0 16px;
+      }
+
+      .content h2:first-of-type {
+        margin-top: 0;
+      }
+
+      .content h3 {
+        color: var(--content-heading);
+        font-size: 16px;
+        font-weight: 700;
+        margin: 24px 0 8px;
+      }
+
+      .content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0 0 16px;
+      }
+
+      .content ul {
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      .content li {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 6px;
+      }
+
+      .content strong {
+        font-weight: 600;
+      }
+
+      .content a {
+        color: var(--content-link);
+        text-decoration: underline;
+      }
+
+      /* --- FOOTER --- */
+      .site-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 24px 24px;
+        background: var(--footer-bg);
+        border-top: 1px solid var(--footer-border);
+      }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .footer-link {
+        font-size: 13px;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        background: none;
+        border: none;
+        cursor: default;
+        font-family: inherit;
+      }
+
+      a.footer-link {
+        cursor: pointer;
+      }
+
+      a.footer-link:hover {
+        color: #ffffff;
+      }
+
+      .footer-copyright {
+        font-size: 12px;
+        color: var(--text-faint);
+      }
+
+      /* --- TABLETTE --- */
+      @media (max-width: 900px) {
+        .site-header {
+          padding: 28px 36px;
+        }
+
+        .page-title {
+          font-size: 28px;
+          padding: 48px 24px 64px;
+        }
+      }
+
+      /* --- MOBILE --- */
+      @media (max-width: 560px) {
+        .site-header {
+          padding: 22px 20px;
+        }
+
+        .logo {
+          height: 22px;
+        }
+
+        .follow-btn {
+          gap: 8px;
+          font-size: 11px;
+        }
+
+        .follow-btn span:first-child {
+          display: none;
+        }
+
+        .follow-icons {
+          gap: 14px;
+        }
+
+        .follow-icons img {
+          width: 28px;
+          height: 28px;
+        }
+
+        .page-title {
+          font-size: 22px;
+          padding: 48px 20px 64px;
+        }
+
+        .content-wrap {
+          padding: 40px 20px 56px;
+        }
+
+        .site-footer {
+          gap: 16px 24px;
+          padding: 20px 20px;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .footer-link {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-band">
+      <header class="site-header">
+        <a href="index.html" style="display: block">
+          <img src="assets/logo-morphos.svg" alt="Morphos" class="logo" />
+        </a>
+
+        <div class="follow-btn" role="img" aria-label="Nous suivre sur Instagram et TikTok">
+          <span>Nous suivre</span>
+          <span class="follow-icons">
+            <img src="assets/icon-instagram.svg" alt="" width="22" height="22" />
+            <img src="assets/icon-tiktok.svg" alt="" width="22" height="22" />
+          </span>
+        </div>
+      </header>
+
+      <h1 class="page-title">Politique de confidentialité</h1>
+    </div>
+
+    <div class="content-wrap">
+      <article class="content">
+        <p class="updated"><strong>Dernière mise à jour : 21 septembre 2026</strong></p>
+
+        <h2>1. Qui sommes-nous ?</h2>
+        <p>
+          Morphos est une application mobile de coaching sportif et nutritionnel
+          propulsée par l'intelligence artificielle. L'application est éditée par
+          Guiral LAPOUGE, joignable à l'adresse :
+          <a href="mailto:guiral.lapouge64@gmail.com">guiral.lapouge64@gmail.com</a>.
+        </p>
+
+        <h2>2. Données collectées</h2>
+        <p>Lors de l'utilisation de Morphos, nous collectons les données suivantes :</p>
+
+        <h3>Données de profil</h3>
+        <ul>
+          <li>Prénom</li>
+          <li>Poids et taille</li>
+          <li>Objectif fitness (sèche, prise de masse, etc.)</li>
+          <li>Matériel d'entraînement disponible</li>
+        </ul>
+
+        <h3>Données d'authentification</h3>
+        <ul>
+          <li>Adresse email</li>
+        </ul>
+
+        <h3>Données de santé et d'activité</h3>
+        <ul>
+          <li>Nombre de pas quotidiens (via Apple Santé / Google Health Connect)</li>
+          <li>Logs d'entraînements (séances effectuées)</li>
+          <li>Logs nutritionnels (aliments consommés et leurs macronutriments)</li>
+          <li>Activités cardio enregistrées</li>
+          <li>Blessures ou limitations physiques signalées, le cas échéant</li>
+        </ul>
+
+        <h3>Données de caméra</h3>
+        <ul>
+          <li>
+            Les photos prises via la fonctionnalité Morphos Vision sont transmises
+            temporairement à notre IA pour analyse nutritionnelle ou corporelle.
+            Elles ne sont pas stockées sur nos serveurs.
+          </li>
+        </ul>
+
+        <h2>3. Comment nous utilisons ces données</h2>
+        <ul>
+          <li>
+            <strong>Personnaliser ton expérience</strong> : adapter les
+            recommandations, le programme sportif et les conseils nutritionnels à
+            ton profil.
+          </li>
+          <li>
+            <strong>Calculer ta balance énergétique</strong> : combiner tes données
+            d'activité, de nutrition et de santé pour t'afficher une balance
+            calorique précise.
+          </li>
+          <li>
+            <strong>Faire fonctionner le Coach IA</strong> : ton profil (objectif,
+            poids, matériel, blessures/limitations signalées, programme en cours)
+            et tes messages sont transmis à notre prestataire d'intelligence
+            artificielle pour générer des réponses et recommandations
+            personnalisées — voir section 6.
+          </li>
+          <li>
+            <strong>Améliorer l'application</strong> : analyser les usages de façon
+            agrégée et anonyme.
+          </li>
+        </ul>
+        <p>Nous ne vendons jamais tes données à des tiers.</p>
+
+        <h2>4. Stockage et sécurité</h2>
+        <p>
+          Tes données sont stockées de manière sécurisée via Supabase
+          (infrastructure chiffrée). Les photos prises pour Morphos Vision ne sont
+          jamais stockées sur nos serveurs : elles sont transmises directement à
+          notre prestataire d'IA pour analyse puis ne sont pas conservées.
+        </p>
+
+        <h2>5. Durée de conservation des données</h2>
+        <p>
+          Tes données de profil, d'entraînement, de nutrition et d'activité
+          sont conservées pendant toute la durée de vie de ton compte, tant
+          que tu utilises Morphos.
+        </p>
+        <ul>
+          <li>
+            <strong>Suppression de compte</strong> : lorsque tu supprimes ton
+            compte (Profil → Paramètres du compte, ou par email), l'ensemble
+            de tes données personnelles (profil, séances, repas, pas,
+            messages du Coach IA, posts et interactions sociales, etc.) est
+            supprimé immédiatement et automatiquement de notre base de
+            données. Seules tes éventuelles contributions à la bibliothèque
+            d'aliments partagée par la communauté sont conservées mais
+            anonymisées (dissociées de ton compte), car il s'agit de contenu
+            partagé et non de données personnelles.
+          </li>
+          <li>
+            <strong>Photos (Morphos Vision)</strong> : comme indiqué en
+            section 2, elles ne sont jamais stockées sur nos serveurs — leur
+            durée de conservation est donc nulle, en dehors du temps
+            strictement nécessaire à l'analyse par notre prestataire d'IA.
+          </li>
+          <li>
+            <strong>Prestataires tiers</strong> (Supabase, OpenAI, Resend) :
+            ces prestataires ne conservent tes données que pour la durée
+            nécessaire à la fourniture du service décrit en section 6,
+            conformément à leurs propres politiques de conservation.
+          </li>
+        </ul>
+
+        <h2>6. Partage des données</h2>
+        <p>Nous ne partageons tes données personnelles avec aucun tiers, à l'exception de :</p>
+        <ul>
+          <li><strong>Supabase</strong> (hébergement et base de données sécurisée)</li>
+          <li>
+            <strong>OpenAI</strong> (traitement des messages du Coach IA et analyse
+            des photos Morphos Vision — cela inclut certaines données de ton
+            profil nécessaires à la personnalisation des réponses : objectif,
+            poids, matériel disponible, blessures/limitations signalées,
+            programme en cours)
+          </li>
+          <li><strong>Resend</strong> (envoi des emails liés aux tickets de support que tu soumets)</li>
+        </ul>
+        <p>
+          Ce partage peut impliquer un transfert de données en dehors de l'Union
+          Européenne (États-Unis). Il est encadré par les garanties appropriées
+          prévues par le RGPD (clauses contractuelles types ou mécanisme
+          équivalent auprès de ces prestataires).
+        </p>
+
+        <h2>7. Tes droits</h2>
+        <p>
+          Conformément au Règlement Général sur la Protection des Données (RGPD),
+          tu peux à tout moment :
+        </p>
+        <ul>
+          <li><strong>Accéder</strong> à tes données personnelles</li>
+          <li><strong>Modifier</strong> ton profil depuis l'application</li>
+          <li>
+            <strong>Supprimer</strong> ton compte et toutes tes données,
+            directement depuis l'application (Profil → Paramètres du compte) ou
+            en contactant :
+            <a href="mailto:guiral.lapouge64@gmail.com">guiral.lapouge64@gmail.com</a>
+          </li>
+          <li>
+            <strong>T'opposer</strong> au traitement de tes données ou en demander
+            la portabilité, en nous contactant à la même adresse
+          </li>
+          <li>
+            <strong>Introduire une réclamation</strong> auprès de la CNIL
+            (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>)
+            si tu estimes que tes droits ne sont pas respectés
+          </li>
+        </ul>
+
+        <h2>8. Données des mineurs</h2>
+        <p>
+          Morphos n'est pas destiné aux personnes de moins de 16 ans. Nous ne
+          collectons pas sciemment de données sur des mineurs.
+        </p>
+
+        <h2>9. Contact</h2>
+        <p>
+          Pour toute question relative à cette politique de confidentialité :<br />
+          <strong>Email :</strong>
+          <a href="mailto:guiral.lapouge64@gmail.com">guiral.lapouge64@gmail.com</a>
+        </p>
+      </article>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a class="footer-link" href="cgu.html">Conditions Générales d'Utilisation</a>
+        <a class="footer-link" href="politique-de-confidentialite.html">Politique de confidentialité</a>
+        <a class="footer-link" href="contact.html">Nous contacter</a>
+        <span class="footer-link">Instagram</span>
+        <span class="footer-link">TikTok</span>
+      </div>
+      <div class="footer-copyright">© 2026 - Morphos</div>
+    </footer>
+  </body>
+</html>

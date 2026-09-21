@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morphos — Ton coach IA sport &amp; nutrition</title>
+    <meta
+      name="description"
+      content="Morphos, ton coach IA personnel pour l'entraînement et la nutrition. Télécharge l'app sur l'App Store ou le Play Store."
+    />
+    <link rel="icon" href="assets/logo-morphos.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --purple-start: #411e7a;
+        --purple-end: #12012c;
+        --btn-bg-start: #48484a;
+        --btn-bg-end: #2c2c2e;
+        --btn-border: rgba(255, 255, 255, 0.5);
+        --text-primary: #ffffff;
+        --text-muted: rgba(255, 255, 255, 0.55);
+        --text-faint: rgba(255, 255, 255, 0.35);
+        --footer-bg: #1b1140;
+        --footer-border: rgba(255, 255, 255, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(
+          160deg,
+          var(--purple-start) 0%,
+          var(--purple-end) 100%
+        );
+        color: var(--text-primary);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* --- HEADER --- */
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 48px;
+      }
+
+      .logo {
+        height: 28px;
+        width: auto;
+        display: block;
+      }
+
+      .follow-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 400;
+        cursor: default;
+      }
+
+      .follow-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .follow-icons img {
+        display: block;
+      }
+
+      /* --- HERO (contenu central) --- */
+      .hero {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 24px 24px 64px;
+        gap: 40px;
+      }
+
+      .hero-title {
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: -0.5px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+        color: var(--text-muted);
+        margin: -24px 0 0;
+        max-width: 480px;
+        line-height: 1.5;
+      }
+
+      .store-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .store-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 28px;
+        border-radius: 14px;
+        background: linear-gradient(
+          135deg,
+          var(--btn-bg-start) 0%,
+          var(--btn-bg-end) 100%
+        );
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none;
+        border: 1px solid var(--btn-border);
+        cursor: default;
+        min-width: 240px;
+        justify-content: center;
+        transition: background 300ms ease;
+      }
+
+      a.store-btn {
+        cursor: pointer;
+      }
+
+      .store-btn:hover {
+        background: linear-gradient(
+          135deg,
+          var(--btn-bg-end) 0%,
+          var(--btn-bg-start) 100%
+        );
+      }
+
+      .store-btn img {
+        flex-shrink: 0;
+      }
+
+      /* --- FOOTER --- */
+      .site-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 24px 24px;
+        background: var(--footer-bg);
+        border-top: 1px solid var(--footer-border);
+      }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .footer-link {
+        font-size: 13px;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        cursor: default;
+      }
+
+      a.footer-link {
+        cursor: pointer;
+      }
+
+      a.footer-link:hover {
+        color: #ffffff;
+      }
+
+      .footer-copyright {
+        font-size: 12px;
+        color: var(--text-faint);
+      }
+
+      /* --- TABLETTE --- */
+      @media (max-width: 900px) {
+        .site-header {
+          padding: 28px 36px;
+        }
+
+        .hero-title {
+          font-size: 32px;
+        }
+
+        .hero {
+          padding: 16px 24px 56px;
+          gap: 32px;
+        }
+      }
+
+      /* --- MOBILE --- */
+      @media (max-width: 560px) {
+        .site-header {
+          padding: 22px 20px;
+        }
+
+        .logo {
+          height: 22px;
+        }
+
+        .follow-btn {
+          gap: 8px;
+          font-size: 11px;
+        }
+
+        .follow-btn span:first-child {
+          display: none;
+        }
+
+        .follow-icons {
+          gap: 14px;
+        }
+
+        .follow-icons img {
+          width: 28px;
+          height: 28px;
+        }
+
+        .hero {
+          gap: 28px;
+          padding: 8px 20px 48px;
+        }
+
+        .hero-title {
+          font-size: 26px;
+        }
+
+        .hero-subtitle {
+          font-size: 14px;
+          margin-top: -16px;
+        }
+
+        .store-buttons {
+          flex-direction: column;
+          width: 100%;
+          gap: 14px;
+        }
+
+        .store-btn {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .site-footer {
+          gap: 16px 24px;
+          padding: 20px 20px;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .footer-link {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <img src="assets/logo-morphos.svg" alt="Morphos" class="logo" />
+
+      <div class="follow-btn" role="img" aria-label="Nous suivre sur Instagram et TikTok">
+        <span>Nous suivre</span>
+        <span class="follow-icons">
+          <img src="assets/icon-instagram.svg" alt="" width="22" height="22" />
+          <img src="assets/icon-tiktok.svg" alt="" width="22" height="22" />
+        </span>
+      </div>
+    </header>
+
+    <main class="hero">
+      <h1 class="hero-title">Ton coach IA sport &amp; nutrition</h1>
+      <p class="hero-subtitle">
+        Programme d'entraînement, suivi nutritionnel et coaching personnalisé,
+        directement dans ta poche.
+      </p>
+
+      <div class="store-buttons">
+        <a
+          class="store-btn"
+          href="https://apps.apple.com/app/id6787116810"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Télécharger sur l'App Store"
+        >
+          <img src="assets/icon-apple.svg" alt="" width="20" height="20" />
+          <span>Télécharger sur l'App Store</span>
+        </a>
+
+        <div class="store-btn" role="img" aria-label="Télécharger sur le Play Store">
+          <img src="assets/icon-play-store.svg" alt="" width="20" height="20" />
+          <span>Télécharger sur le Play Store</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a class="footer-link" href="cgu.html">Conditions Générales d'Utilisation</a>
+        <a class="footer-link" href="politique-de-confidentialite.html">Politique de confidentialité</a>
+        <a class="footer-link" href="contact.html">Nous contacter</a>
+        <span class="footer-link">Instagram</span>
+        <span class="footer-link">TikTok</span>
+      </div>
+      <div class="footer-copyright">© 2026 - Morphos</div>
+    </footer>
+  </body>
+</html>

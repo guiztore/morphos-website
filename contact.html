@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nous contacter — Morphos</title>
+    <meta
+      name="description"
+      content="Contacte l'équipe Morphos, ton coach IA personnel pour l'entraînement et la nutrition."
+    />
+    <link rel="icon" href="assets/logo-morphos.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --purple-start: #411e7a;
+        --purple-end: #12012c;
+        --footer-bg: #1b1140;
+        --footer-border: rgba(255, 255, 255, 0.1);
+        --text-muted: rgba(255, 255, 255, 0.55);
+        --text-faint: rgba(255, 255, 255, 0.35);
+        --content-heading: #2c1259;
+        --content-text: #2b2b2e;
+        --content-muted: #5c5c63;
+        --content-link: #5b2ea6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        background: #ffffff;
+        color: var(--content-text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* --- BANDEAU (header + titre de page) --- */
+      .top-band {
+        background: linear-gradient(
+          160deg,
+          var(--purple-start) 0%,
+          var(--purple-end) 100%
+        );
+        color: #ffffff;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 48px;
+      }
+
+      .logo {
+        height: 28px;
+        width: auto;
+        display: block;
+      }
+
+      .follow-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 400;
+        cursor: default;
+      }
+
+      .follow-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .follow-icons img {
+        display: block;
+      }
+
+      .page-title {
+        text-align: center;
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 0;
+        padding: 48px 24px 64px;
+      }
+
+      /* --- CONTENU --- */
+      .content-wrap {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: 56px 24px 80px;
+      }
+
+      .content {
+        max-width: 720px;
+        width: 100%;
+      }
+
+      .content p.updated {
+        color: var(--content-muted);
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 40px;
+      }
+
+      .content h2 {
+        color: var(--content-heading);
+        font-size: 22px;
+        font-weight: 700;
+        margin: 40px 0 16px;
+      }
+
+      .content h2:first-of-type {
+        margin-top: 0;
+      }
+
+      .content h3 {
+        color: var(--content-heading);
+        font-size: 16px;
+        font-weight: 700;
+        margin: 24px 0 8px;
+      }
+
+      .content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0 0 16px;
+      }
+
+      .content ul {
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      .content li {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 6px;
+      }
+
+      .content strong {
+        font-weight: 600;
+      }
+
+      .content a {
+        color: var(--content-link);
+        text-decoration: underline;
+      }
+
+      /* --- FORMULAIRE DE CONTACT --- */
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 8px;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 20px;
+      }
+
+      .form-field {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .form-field label {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--content-heading);
+      }
+
+      .form-field .optional {
+        font-weight: 400;
+        color: var(--content-muted);
+      }
+
+      .form-field input,
+      .form-field textarea {
+        font-family: inherit;
+        font-size: 15px;
+        color: var(--content-text);
+        background: #f7f5fb;
+        border: 1px solid rgba(44, 18, 89, 0.15);
+        border-radius: 10px;
+        padding: 12px 14px;
+        outline: none;
+      }
+
+      .form-field input:focus,
+      .form-field textarea:focus {
+        border-color: var(--content-link);
+        background: #ffffff;
+      }
+
+      .form-field textarea {
+        resize: vertical;
+        min-height: 140px;
+      }
+
+      .submit-btn {
+        align-self: flex-start;
+        font-family: inherit;
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffff;
+        background: linear-gradient(
+          160deg,
+          var(--purple-start) 0%,
+          var(--purple-end) 100%
+        );
+        border: none;
+        border-radius: 10px;
+        padding: 14px 32px;
+        cursor: pointer;
+      }
+
+      .submit-btn:hover {
+        opacity: 0.92;
+      }
+
+      /* --- FOOTER --- */
+      .site-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 24px 24px;
+        background: var(--footer-bg);
+        border-top: 1px solid var(--footer-border);
+      }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .footer-link {
+        font-size: 13px;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        background: none;
+        border: none;
+        cursor: default;
+        font-family: inherit;
+      }
+
+      a.footer-link {
+        cursor: pointer;
+      }
+
+      a.footer-link:hover {
+        color: #ffffff;
+      }
+
+      .footer-copyright {
+        font-size: 12px;
+        color: var(--text-faint);
+      }
+
+      /* --- TABLETTE --- */
+      @media (max-width: 900px) {
+        .site-header {
+          padding: 28px 36px;
+        }
+
+        .page-title {
+          font-size: 28px;
+          padding: 48px 24px 64px;
+        }
+      }
+
+      /* --- MOBILE --- */
+      @media (max-width: 560px) {
+        .site-header {
+          padding: 22px 20px;
+        }
+
+        .logo {
+          height: 22px;
+        }
+
+        .follow-btn {
+          gap: 8px;
+          font-size: 11px;
+        }
+
+        .follow-btn span:first-child {
+          display: none;
+        }
+
+        .follow-icons {
+          gap: 14px;
+        }
+
+        .follow-icons img {
+          width: 28px;
+          height: 28px;
+        }
+
+        .page-title {
+          font-size: 22px;
+          padding: 48px 20px 64px;
+        }
+
+        .content-wrap {
+          padding: 40px 20px 56px;
+        }
+
+        .form-row {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .submit-btn {
+          align-self: stretch;
+          text-align: center;
+        }
+
+        .site-footer {
+          gap: 16px 24px;
+          padding: 20px 20px;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .footer-link {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-band">
+      <header class="site-header">
+        <a href="index.html" style="display: block">
+          <img src="assets/logo-morphos.svg" alt="Morphos" class="logo" />
+        </a>
+
+        <div class="follow-btn" role="img" aria-label="Nous suivre sur Instagram et TikTok">
+          <span>Nous suivre</span>
+          <span class="follow-icons">
+            <img src="assets/icon-instagram.svg" alt="" width="22" height="22" />
+            <img src="assets/icon-tiktok.svg" alt="" width="22" height="22" />
+          </span>
+        </div>
+      </header>
+
+      <h1 class="page-title">Nous contacter</h1>
+    </div>
+
+    <div class="content-wrap">
+      <article class="content">
+        <p>
+          Une question, une suggestion, un souci avec l'application ? Remplis
+          le formulaire ci-dessous, nous te répondrons par email dans les
+          meilleurs délais.
+        </p>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xljeyakq"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="Nouveau message - Contact Morphos" />
+          <div class="form-row">
+            <div class="form-field">
+              <label for="firstname">Prénom</label>
+              <input type="text" id="firstname" name="firstname" required />
+            </div>
+            <div class="form-field">
+              <label for="lastname">Nom</label>
+              <input type="text" id="lastname" name="lastname" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-field">
+              <label for="phone">Téléphone <span class="optional">(facultatif)</span></label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+      </article>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a class="footer-link" href="cgu.html">Conditions Générales d'Utilisation</a>
+        <a class="footer-link" href="politique-de-confidentialite.html">Politique de confidentialité</a>
+        <a class="footer-link" href="contact.html">Nous contacter</a>
+        <span class="footer-link">Instagram</span>
+        <span class="footer-link">TikTok</span>
+      </div>
+      <div class="footer-copyright">© 2026 - Morphos</div>
+    </footer>
+  </body>
+</html>

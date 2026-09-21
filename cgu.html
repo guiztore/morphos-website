@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions Générales d'Utilisation — Morphos</title>
+    <meta
+      name="description"
+      content="Conditions Générales d'Utilisation de Morphos, ton coach IA personnel pour l'entraînement et la nutrition."
+    />
+    <link rel="icon" href="assets/logo-morphos.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --purple-start: #411e7a;
+        --purple-end: #12012c;
+        --footer-bg: #1b1140;
+        --footer-border: rgba(255, 255, 255, 0.1);
+        --text-muted: rgba(255, 255, 255, 0.55);
+        --text-faint: rgba(255, 255, 255, 0.35);
+        --content-heading: #2c1259;
+        --content-text: #2b2b2e;
+        --content-muted: #5c5c63;
+        --content-link: #5b2ea6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        background: #ffffff;
+        color: var(--content-text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* --- BANDEAU (header + titre de page) --- */
+      .top-band {
+        background: linear-gradient(
+          160deg,
+          var(--purple-start) 0%,
+          var(--purple-end) 100%
+        );
+        color: #ffffff;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 48px;
+      }
+
+      .logo {
+        height: 28px;
+        width: auto;
+        display: block;
+      }
+
+      .follow-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 400;
+        cursor: default;
+      }
+
+      .follow-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .follow-icons img {
+        display: block;
+      }
+
+      .page-title {
+        text-align: center;
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 0;
+        padding: 48px 24px 64px;
+      }
+
+      /* --- CONTENU --- */
+      .content-wrap {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: 56px 24px 80px;
+      }
+
+      .content {
+        max-width: 720px;
+        width: 100%;
+      }
+
+      .content p.updated {
+        color: var(--content-muted);
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 40px;
+      }
+
+      .content h2 {
+        color: var(--content-heading);
+        font-size: 22px;
+        font-weight: 700;
+        margin: 40px 0 16px;
+      }
+
+      .content h2:first-of-type {
+        margin-top: 0;
+      }
+
+      .content h3 {
+        color: var(--content-heading);
+        font-size: 16px;
+        font-weight: 700;
+        margin: 24px 0 8px;
+      }
+
+      .content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0 0 16px;
+      }
+
+      .content ul {
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      .content li {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 6px;
+      }
+
+      .content strong {
+        font-weight: 600;
+      }
+
+      .content a {
+        color: var(--content-link);
+        text-decoration: underline;
+      }
+
+      /* --- FOOTER --- */
+      .site-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 24px 24px;
+        background: var(--footer-bg);
+        border-top: 1px solid var(--footer-border);
+      }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .footer-link {
+        font-size: 13px;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        background: none;
+        border: none;
+        cursor: default;
+        font-family: inherit;
+      }
+
+      a.footer-link {
+        cursor: pointer;
+      }
+
+      a.footer-link:hover {
+        color: #ffffff;
+      }
+
+      .footer-copyright {
+        font-size: 12px;
+        color: var(--text-faint);
+      }
+
+      /* --- TABLETTE --- */
+      @media (max-width: 900px) {
+        .site-header {
+          padding: 28px 36px;
+        }
+
+        .page-title {
+          font-size: 28px;
+          padding: 48px 24px 64px;
+        }
+      }
+
+      /* --- MOBILE --- */
+      @media (max-width: 560px) {
+        .site-header {
+          padding: 22px 20px;
+        }
+
+        .logo {
+          height: 22px;
+        }
+
+        .follow-btn {
+          gap: 8px;
+          font-size: 11px;
+        }
+
+        .follow-btn span:first-child {
+          display: none;
+        }
+
+        .follow-icons {
+          gap: 14px;
+        }
+
+        .follow-icons img {
+          width: 28px;
+          height: 28px;
+        }
+
+        .page-title {
+          font-size: 22px;
+          padding: 48px 20px 64px;
+        }
+
+        .content-wrap {
+          padding: 40px 20px 56px;
+        }
+
+        .site-footer {
+          gap: 16px 24px;
+          padding: 20px 20px;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .footer-link {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-band">
+      <header class="site-header">
+        <a href="index.html" style="display: block">
+          <img src="assets/logo-morphos.svg" alt="Morphos" class="logo" />
+        </a>
+
+        <div class="follow-btn" role="img" aria-label="Nous suivre sur Instagram et TikTok">
+          <span>Nous suivre</span>
+          <span class="follow-icons">
+            <img src="assets/icon-instagram.svg" alt="" width="22" height="22" />
+            <img src="assets/icon-tiktok.svg" alt="" width="22" height="22" />
+          </span>
+        </div>
+      </header>
+
+      <h1 class="page-title">Conditions Générales d'Utilisation</h1>
+    </div>
+
+    <div class="content-wrap">
+      <article class="content">
+        <p class="updated"><strong>Dernière mise à jour : 23 juillet 2026</strong></p>
+
+        <h2>1. Objet</h2>
+        <p>
+          Les présentes Conditions Générales d'Utilisation (« CGU ») ont pour
+          objet de définir les modalités et conditions dans lesquelles Guiral
+          LAPOUGE, éditeur individuel de l'application (activité non encore
+          immatriculée à ce jour), joignable à l'adresse
+          <a href="mailto:guiral.lapouge64@gmail.com">guiral.lapouge64@gmail.com</a>
+          (ci-après « Morphos », « nous ») met à disposition des utilisateurs
+          (ci-après « l'Utilisateur », « vous ») l'application mobile Morphos
+          (ci-après le « Service »), à titre gratuit.
+        </p>
+        <p>
+          L'accès et l'utilisation du Service impliquent l'acceptation pleine
+          et entière des présentes CGU. Si vous n'acceptez pas ces CGU, vous
+          ne devez pas utiliser le Service.
+        </p>
+
+        <h2>2. Description du Service</h2>
+        <p>
+          Morphos est une application de coaching sportif et nutritionnel
+          assistée par intelligence artificielle, proposant notamment :
+        </p>
+        <ul>
+          <li>La génération et le suivi de programmes d'entraînement personnalisés ;</li>
+          <li>Un suivi nutritionnel (calories, macronutriments, hydratation) ;</li>
+          <li>
+            Un assistant conversationnel basé sur l'intelligence artificielle
+            (« Coach IA ») pouvant répondre à vos questions, ajuster votre
+            programme et enregistrer des informations à votre demande ;
+          </li>
+          <li>
+            Des fonctionnalités sociales (profil public, publications,
+            abonnements, likes et commentaires) ;
+          </li>
+          <li>Des fonctionnalités de gamification (badges, suivi de progression).</li>
+        </ul>
+
+        <h2>3. Avertissement santé — Absence de conseil médical</h2>
+        <p>
+          <strong>Morphos n'est pas un dispositif médical et ne fournit aucun
+          avis, diagnostic ou traitement médical.</strong> Les programmes
+          d'entraînement et recommandations nutritionnelles générés par le
+          Service, y compris par le Coach IA, sont fournis à titre purement
+          informatif et indicatif.
+        </p>
+        <p>
+          Il est vivement recommandé de consulter un médecin ou un
+          professionnel de santé qualifié avant de débuter tout programme
+          sportif ou nutritionnel, en particulier en cas de pathologie,
+          blessure, grossesse ou de toute condition médicale préexistante.
+          Vous reconnaissez pratiquer les activités proposées sous votre
+          seule responsabilité.
+        </p>
+        <p>
+          En cas de blessure ou de signalement d'une limitation physique via
+          le Service, les ajustements proposés par le Coach IA ne remplacent
+          en aucun cas un avis médical.
+        </p>
+
+        <h2>4. Utilisation de l'intelligence artificielle</h2>
+        <p>
+          Le Coach IA de Morphos s'appuie sur des modèles d'intelligence
+          artificielle fournis par des prestataires tiers (notamment OpenAI).
+          À ce titre :
+        </p>
+        <ul>
+          <li>
+            Les messages que vous échangez avec le Coach IA, ainsi que
+            certaines données de votre profil (objectifs, programme, données
+            nutritionnelles) nécessaires à la personnalisation des réponses,
+            sont transmis à ce(s) prestataire(s) tiers pour traitement ;
+          </li>
+          <li>
+            Ce traitement peut impliquer un transfert de données en dehors de
+            l'Union Européenne ; Morphos s'assure que ce transfert est
+            encadré par des garanties appropriées (clauses contractuelles
+            types ou mécanisme équivalent), conformément au RGPD ;
+          </li>
+          <li>
+            Les réponses générées par l'IA peuvent, comme toute intelligence
+            artificielle générative, contenir des erreurs, imprécisions ou
+            incohérences. Il vous appartient de faire preuve d'esprit
+            critique quant aux recommandations fournies ;
+          </li>
+          <li>
+            Le détail des finalités et bases légales de ce traitement est
+            précisé dans notre
+            <a href="politique-de-confidentialite.html">Politique de Confidentialité</a>.
+          </li>
+        </ul>
+
+        <h2>5. Création de compte</h2>
+        <p>
+          L'utilisation du Service nécessite la création d'un compte,
+          associé à une adresse email et un mot de passe. Vous vous engagez
+          à fournir des informations exactes et à jour, et à maintenir la
+          confidentialité de vos identifiants de connexion. Vous êtes seul
+          responsable de toute activité effectuée depuis votre compte.
+        </p>
+        <p>
+          L'accès au Service est réservé aux personnes âgées de 16 ans ou
+          plus.
+        </p>
+
+        <h2>6. Contenu utilisateur et fonctionnalités sociales</h2>
+        <p>
+          En publiant du contenu sur Morphos (photos, vidéos, commentaires,
+          bio, nom d'utilisateur), vous garantissez détenir les droits
+          nécessaires sur ce contenu et vous engagez à ne publier aucun
+          contenu illicite, injurieux, diffamatoire, contrefaisant ou
+          portant atteinte aux droits de tiers.
+        </p>
+        <p>
+          Vous concédez à Morphos une licence non exclusive, gratuite et
+          limitée à l'hébergement et l'affichage de ce contenu au sein du
+          Service, dans la mesure nécessaire à son fonctionnement (ex :
+          affichage sur le fil d'actualité, le profil public).
+        </p>
+        <p>
+          Morphos se réserve le droit de retirer tout contenu signalé comme
+          contraire aux présentes CGU et de suspendre ou supprimer le compte
+          d'un Utilisateur en cas de manquement grave ou répété.
+        </p>
+        <p>
+          Si vous configurez votre profil en mode public, les informations
+          que vous y publiez (photos, statistiques de progression, bio) sont
+          visibles par les autres utilisateurs du Service.
+        </p>
+
+        <h2>7. Gratuité du Service</h2>
+        <p>
+          Le Service est actuellement proposé gratuitement, sans collecte de
+          paiement d'aucune sorte. Nous nous réservons la possibilité
+          d'introduire à l'avenir des fonctionnalités payantes ou un
+          abonnement ; le cas échéant, les Utilisateurs en seraient informés
+          au préalable et des Conditions Générales de Vente (CGV) dédiées
+          seraient publiées, précisant les offres, tarifs, modalités de
+          résiliation et de remboursement.
+        </p>
+
+        <h2>8. Propriété intellectuelle</h2>
+        <p>
+          L'ensemble des éléments du Service (marque, logo, interface,
+          textes, programmes générés par défaut, base de données d'exercices)
+          sont la propriété exclusive de Morphos ou de ses concédants, et
+          sont protégés par le droit de la propriété intellectuelle. Toute
+          reproduction ou exploitation non autorisée est interdite.
+        </p>
+
+        <h2>9. Données personnelles</h2>
+        <p>
+          Le traitement de vos données personnelles est détaillé dans notre
+          <a href="politique-de-confidentialite.html">Politique de Confidentialité</a>.
+          En utilisant le Service, vous reconnaissez avoir pris connaissance
+          de cette politique.
+        </p>
+
+        <h2>10. Disponibilité et évolution du Service</h2>
+        <p>
+          Morphos s'efforce d'assurer un accès continu au Service mais ne
+          garantit pas une disponibilité ininterrompue. Le Service peut être
+          suspendu, notamment pour maintenance, sans que cela n'engage la
+          responsabilité de Morphos.
+        </p>
+        <p>
+          Morphos se réserve le droit de faire évoluer, modifier ou supprimer
+          tout ou partie des fonctionnalités du Service à tout moment.
+        </p>
+
+        <h2>11. Limitation de responsabilité</h2>
+        <p>
+          Dans les limites autorisées par la loi, Morphos ne saurait être
+          tenu responsable des dommages directs ou indirects résultant de
+          l'utilisation du Service, notamment liés à une blessure survenue
+          lors de la pratique d'une activité physique recommandée par le
+          Service, à une interruption du Service, ou à une erreur dans les
+          informations générées par le Coach IA.
+        </p>
+
+        <h2>12. Résiliation</h2>
+        <p>
+          Vous pouvez supprimer votre compte à tout moment depuis les
+          paramètres de l'application. Cette suppression entraîne
+          l'effacement de vos données conformément à notre Politique de
+          Confidentialité.
+        </p>
+        <p>
+          Morphos se réserve le droit de suspendre ou résilier l'accès d'un
+          Utilisateur au Service en cas de violation des présentes CGU.
+        </p>
+
+        <h2>13. Modification des CGU</h2>
+        <p>
+          Morphos se réserve le droit de modifier les présentes CGU à tout
+          moment. Les Utilisateurs seront informés de toute modification
+          substantielle. La poursuite de l'utilisation du Service après
+          modification vaut acceptation des nouvelles CGU.
+        </p>
+
+        <h2>14. Droit applicable et litiges</h2>
+        <p>
+          Les présentes CGU sont soumises au droit français. En cas de
+          litige, et à défaut de résolution amiable, les tribunaux français
+          compétents seront seuls saisis.
+        </p>
+
+        <h2>15. Contact</h2>
+        <p>
+          Pour toute question relative aux présentes CGU, vous pouvez nous
+          contacter à l'adresse suivante :
+          <a href="mailto:guiral.lapouge64@gmail.com">guiral.lapouge64@gmail.com</a>,
+          ou via le formulaire de signalement disponible directement dans
+          l'application.
+        </p>
+      </article>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a class="footer-link" href="cgu.html">Conditions Générales d'Utilisation</a>
+        <a class="footer-link" href="politique-de-confidentialite.html">Politique de confidentialité</a>
+        <a class="footer-link" href="contact.html">Nous contacter</a>
+        <span class="footer-link">Instagram</span>
+        <span class="footer-link">TikTok</span>
+      </div>
+      <div class="footer-copyright">© 2026 - Morphos</div>
+    </footer>
+  </body>
+</html>
